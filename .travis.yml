@@ -7,5 +7,4 @@ before_install:
   - gem install xcpretty
 
 script:
-  - swiftlint
   - set -o pipefail && xcodebuild -workspace KataSuperHeroes.xcworkspace -scheme 'KataSuperHeroes' -destination 'platform=iOS Simulator,name=iPhone 8' build test CODE_SIGN_IDENTITY=- | xcpretty -c
